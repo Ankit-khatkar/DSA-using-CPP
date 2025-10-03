@@ -8,7 +8,7 @@ void outsidefunction()
 int main()
 {
 
-  // Hollow Rectangular Pattern-------------------
+  // Que:-  Hollow Rectangular Pattern-------------------
 
   // for (int i = 0; i <= 3; i++)
   // {
@@ -24,7 +24,7 @@ int main()
   //   cout << endl;
   // }
 
-  // Right Triangular Pattern----------
+  // Que:- Right Triangular Pattern----------
 
   // for (int i = 0; i <= 3; i++)
   // {
@@ -35,7 +35,7 @@ int main()
   //   cout << endl;
   // }
 
-  // Reverse Right Triangular Pattern----------
+  // Que:- Reverse Right Triangular Pattern----------
 
   // for (int i = 0; i <= 3; i++)
   // {
@@ -46,7 +46,7 @@ int main()
   //   cout << endl;
   // }
 
-  // Pyramid Pattern------------------------
+  // Que:- Pyramid Pattern------------------------
 
   // int n;
   // cin >> n;
@@ -63,7 +63,7 @@ int main()
   //   cout << endl;
   // }
 
-  // Numerical Square Pattern---------------------
+  // Que:- Numerical Square Pattern---------------------
 
   // int n;
   // cin >> n;
@@ -80,7 +80,7 @@ int main()
   //   cout << endl;
   // }
 
-  // Count the number of digits for the given number n----------------
+  // Que:- Count the number of digits for the given number n----------------
 
   // int n;
   // cin >> n;
@@ -93,7 +93,7 @@ int main()
   // }
   // cout << digits << endl;
 
-  // Write the programme to find the sum of digits of given number n----------
+  // Que:- Write the programme to find the sum of digits of given number n----------
 
   // int n;
   // cin >> n;
@@ -108,7 +108,7 @@ int main()
   // }
   // cout << sum;
 
-  // Write the programme to reverse the given number--------
+  // Que:- Write the programme to reverse the given number--------
 
   // int n;
   // cin >> n;
@@ -122,7 +122,7 @@ int main()
   // }
   // cout << rev_num;
 
-  // Write the sum of the following series-----------
+  // Que:- Write the sum of the following series-----------
 
   // S = 1 - 2 + 3 - 4 + .............n
 
@@ -142,7 +142,7 @@ int main()
   // }
   // cout << result;
 
-  // Write the programme to print the n feactorial number----------
+  // Que:- Write the programme to print the n feactorial number----------
 
   // int n;
   // cin >> n;
@@ -158,16 +158,35 @@ int main()
   // }
   // cout << result;
 
-  // Write the programme to find the a raise to the power b.
+  // Que:- Write the programme to find the a raise to the power b.
 
-  int a, b;
-  cin >> a >> b;
-  int ans = 1;
-  for (int i = 1; i <= b; i++)
-  {
-    ans *= a;
-  }
-  cout << ans;
+  // int a, b;
+  // cin >> a >> b;
+  // int ans = 1;
+  // for (int i = 1; i <= b; i++)
+  // {
+  //   ans *= a;
+  // }
+  // cout << ans;
 
-  return 0;
+  // return 0;
+
+  // Que:- Given an array of integers {nums} and an integer "target", return indices of the two numbers such that they add up to "target".
+  // Note:- you may assume that each input would have excatly one solution, and you may not use the same element twice.
+
+  // Example:- nums=[3,2,4], target=6
+  // Output:- [1,2]
+
+    // int arr[] = {3, 7, 2, 15};
+  // int target = 9;
+  // for (int i = 0; i <= 3; i++)
+  // {
+  //   for (int j = i + 1; j <= 4; j++)
+  //   {
+  //     if (arr[i] + arr[j] == target)
+  //     {
+  //       cout << i << j << endl;
+  //     }
+  //   }
+  // }
 }
