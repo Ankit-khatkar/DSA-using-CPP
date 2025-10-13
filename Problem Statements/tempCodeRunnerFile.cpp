@@ -1,0 +1,2 @@
+
+      unique = arr[k];
