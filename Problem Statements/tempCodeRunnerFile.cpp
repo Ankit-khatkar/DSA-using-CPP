@@ -1,2 +1,4 @@
-
-      unique = arr[k];
+for (int num : target_vector)
+  // {
+  //   cout << num << " ";
+  // }
