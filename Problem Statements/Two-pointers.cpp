@@ -146,9 +146,8 @@ void sort_get_squrarr(vector<int> &arr)
     i--;
   }
 }
-
 int main()
 {
-  vector<int> arr = {-5, -2, 3, 4, 6};
-  sort_get_squrarr(arr);
+  vector<int> arr = {3, 2, 2, 3};
+  // sort_get_squrarr(arr);
 }

@@ -1,4 +1,6 @@
-for (int num : target_vector)
-  // {
-  //   cout << num << " ";
-  // }
+int ans = 1;
+  while (n > 0)
+  {
+    ans = ans * n;
+    n--;
+  }
