@@ -98,11 +98,36 @@ void leftMostAppraoch(const vector<vector<int>> &arr)
   }
   cout << ansrow;
 }
+
+// QUE:- Reverse the matrix 90 degree without using any extra space.
+void reverseMatrix(vector<vector<int>> v)
+{
+  for (int i = 0; i < v.size(); i++)
+  {
+    for (int j = 0; j < i; j++)
+    {
+      swap(v[i][j], v[j][i]);
+    }
+  }
+  for (int i = 0; i < v.size(); i++)
+  {
+    reverse(v[i].begin(), v[i].end());
+  }
+  return;
+}
+
+void totaldigits(int x)
+{
+  int digits = 0;
+  while (x > 0)
+  {
+    x /= 10;
+    digits++;
+  }
+  cout << digits;
+}
 int main()
 {
-  const std::vector<std::vector<int>> v = {{0, 0, 0, 1},
-                                           {0, 0, 1, 1},
-                                           {1, 1, 1, 1},
-                                           {0, 1, 1, 1}};
-  leftMostAppraoch(v);
+  totaldigits(123);
+  return 0;
 }
