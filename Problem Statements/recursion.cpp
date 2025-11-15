@@ -28,24 +28,22 @@ void arrayReverse(vector<int> &V, int a, int b)
   swap(V[a], V[b]);
   arrayReverse(V, a + 1, b - 1);
 }
-bool isSpecial(vector<char> escapeChars, char c)
+
+// QUE:- A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+bool isSpecial(vector<char> &escapeChars, char c)
 {
-  bool flag = false;
-  for (int i = 0; i < escapeChars.size(); i++)
-  {
-    if (escapeChars[i] == c)
-    {
-      flag = true;
-      return flag;
-    }
-  }
-  return flag;
+  for (char x : escapeChars)
+    if (x == c)
+      return true;
+  return false;
 }
-void isPlaindrome(string &str, int a, int b)
+
+string revserestr(string &str, int a)
 {
-  if (a >= b)
+  if (a >= str.size())
   {
-    return;
+    reverse(str.begin(), str.end());
+    return str;
   }
   vector<char> escapeChars = {
       '!', '"', '#', '$', '%', '&', '\'', '(', ')',
@@ -53,30 +51,37 @@ void isPlaindrome(string &str, int a, int b)
       '<', '=', '>', '?', '@',
       '[', '\\', ']', '^', '_', '`',
       '{', '|', '}', '~', ' '};
-  char c1 = str[a];
-  char c2 = str[b];
-  bool checkSpecialChar1 = isSpecial(escapeChars, c1);
-  bool checkSpecialChar2 = isSpecial(escapeChars, c2);
-
-  if (checkSpecialChar1 == false && checkSpecialChar2 == false)
+  bool s1 = isSpecial(escapeChars, str[a]);
+  if (s1)
   {
-    swap(str[a], str[b]);
-    isPlaindrome(str, a++, b--);
+    str.erase(a, 1);
+    return revserestr(str, a);
   }
-  if (checkSpecialChar1 == true)
-  {
-    isPlaindrome(str, a++, b);
-  }
-  if (checkSpecialChar2 == true)
-  {
-    isPlaindrome(str, a, b--);
-  }
+  str[a] = tolower(str[a]);
+  return revserestr(str, a + 1);
 }
+bool isPlaindrome(string &str)
+{
+  int x = 0;
+  string new_str = revserestr(str, x);
+
+  int y = new_str.size() - 1;
+
+  while (x < y)
+  {
+    if (new_str[x] != new_str[y])
+    {
+      return false;
+    }
+    x++;
+    y--;
+  }
+  // cout << flag;
+  return true;
+}
+
 int main()
 {
-  string str = "Ankit Kuma.r";
-  int a = 0;
-  int b = str.size() - 1;
-  isPlaindrome(str, a, b);
-  cout << str;
+  string str = "Able was I ere I saw Elba";
+  cout << isPlaindrome(str);
 }
